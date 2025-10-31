@@ -1,0 +1,26 @@
+$color-back: #FAF7F0;
+$color-shade: #D8D2C2;
+$color-accent: #B17457;
+$color-text: #4A4947;
+
+$font: 'Crimson Text';
+
+
+body {
+    background-color: $color-back;
+    color: $color-text;
+    font-family: $font;
+}
+
+.text-center {
+    text-align: center
+}
+
+.page {
+    min-height: 100vh;
+}
+
+.h-center {
+    display: flex;
+    justify-content: center;
+}

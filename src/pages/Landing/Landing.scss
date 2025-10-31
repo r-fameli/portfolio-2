@@ -1,0 +1,25 @@
+#landing {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    height: 100vh;
+    width: 100%;
+}
+
+.intro {
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 180px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 75px;
+}
+
+hr {
+    text-align: center;
+    width: 60vw;
+}
