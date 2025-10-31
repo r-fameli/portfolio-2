@@ -18,9 +18,15 @@ body {
 
 .page {
     min-height: 100vh;
+    padding: 10vh 10vw 10vh 10vw; // top r bot left
 }
 
 .h-center {
     display: flex;
     justify-content: center;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight:lighter;
 }

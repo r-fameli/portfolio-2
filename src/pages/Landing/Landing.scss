@@ -1,13 +1,18 @@
+#landing-page {
+    height: 100vh;
+}
+
 #landing {
     display: flex;
     justify-content: center;
     align-items:center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
+    flex: 1;
 }
 
 .intro {
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .title {
