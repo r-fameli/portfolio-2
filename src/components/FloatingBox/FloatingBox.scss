@@ -1,7 +1,4 @@
-$color-back: #FAF7F0;
-$color-shade: #D8D2C2;
-$color-accent: #B17457;
-$color-text: #4A4947;
+@import "../../variables";
 
 :root {
     --box-heading-size: 150%;
@@ -14,7 +11,7 @@ $color-text: #4A4947;
     padding-bottom: 20px;
     background-color: #FAF7F0;
     transition: box-shadow 0.7s, margin-top 1s, margin-left 1s;
-    border: 2px solid #4A4947;
+    border: 1.5px solid #4A4947;
 }
 
 .FloatingBox:hover {
