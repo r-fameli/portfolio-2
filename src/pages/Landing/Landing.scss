@@ -5,7 +5,7 @@
 #landing {
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     height: 100%;
     width: 100%;
     flex: 1;
@@ -16,15 +16,15 @@
 }
 
 .title {
-    font-size: 180px;
+    font-size: 100px;
 }
 
 .subtitle {
     margin-top: 20px;
-    font-size: 75px;
+    font-size: 50px;
 }
 
 hr {
     text-align: center;
-    width: 60vw;
+    width: 50vw;
 }
