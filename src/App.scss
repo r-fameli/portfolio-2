@@ -1,9 +1,9 @@
-@import "variables";
+@use 'variables';
 
 body {
-    background-color: $color-back;
-    color: $color-text;
-    font-family: $font;
+    background-color: variables.$color-back;
+    color: variables.$color-text;
+    font-family: variables.$font;
 }
 
 .text-center {

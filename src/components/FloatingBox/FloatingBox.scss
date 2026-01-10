@@ -1,4 +1,4 @@
-@import "../../variables";
+@use '../../variables';
 
 :root {
     --box-heading-size: 150%;
@@ -31,7 +31,7 @@
 }
 
 .FloatingBox-subtitle {
-    color: $color-accent;
+    color: variables.$color-accent;
 }
 
 // Expandable
