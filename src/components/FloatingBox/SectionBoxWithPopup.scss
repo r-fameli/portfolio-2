@@ -1,0 +1,189 @@
+
+:root {
+    --popup-click-height:500px;
+    --video-height:400px;
+    --popup-hover-height:40px;
+    --time-hover:1s;
+    --time-down:1s;
+    --time-up:1s;
+    --tab-color:#A2D2D2;
+}
+
+.SectionBoxWithPopup {
+    width: 80%;
+}
+
+.SectionBoxWithPopup-text {
+    background-color: #8AC6D1;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    vertical-align: top;
+    width: 100%;
+    position:relative;
+    z-index:1;
+    overflow: hidden;
+    font-size: 18px;
+}
+
+.SectionBoxWithPopup-text p {
+    font-size: inherit;
+}
+
+.SectionBoxWithPopup-text h1 {
+    margin-bottom: 10px;
+    text-align:center;
+    font-size: var(--box-heading-size);
+}
+
+.SectionBoxWithPopup-text ul li {
+    margin-left:20px;
+}
+
+.SectionBoxWithPopup-links {
+    text-align: right;
+}
+
+.SectionBoxWithPopup-link-btn {
+    background: whitesmoke;
+    border: 3px solid lightblue; /* purple: #6e6fac */
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font:inherit;
+    font-size: 20px;
+    transition: border 0.3s;
+}
+
+.SectionBoxWithPopup-link-btn:hover {
+    cursor: help;
+    border: 6px solid lightblue;
+}
+
+.SectionBoxWithPopup-frame {
+    display:flex;
+    flex-direction: column;
+    background-color: var(--tab-color);
+    padding: 30px;
+    padding-bottom: 50px;
+}
+
+.SectionBoxWithPopup-tab {
+    text-align:center;
+    background-color:var(--tab-color);
+    width: 40%;
+    font-size: 30px;
+    padding: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    --br:5px;
+    border-top-left-radius: var(--br);
+    border-top-right-radius: var(--br);
+}
+
+.SectionBoxWithPopup {
+    width:80%;
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    min-height: 100px;
+    transition: margin-bottom var(--time-up), margin-top var(--time-up), box-shadow var(--time-up);
+}
+
+.SectionBox-popup {
+    position:absolute;
+    z-index: 0;
+    overflow:hidden;
+    width:80%;
+    height:90px;
+    transition: margin-top var(--time-up), height var(--time-up);
+}
+
+.SectionBoxWithPopup-image {
+    width: 100%;
+    height: var(--popup-click-height)
+}
+
+.SectionBoxWithPopup-video {
+    background-color: #91C6CF;
+    width: 100%;
+    height: var(--video-height);
+    display: block;
+}
+
+.SectionBox-popup-hovered {
+    margin-top: calc(-1 * var(--popup-hover-height));
+    height: var(--popup-hover-height);
+    transition: margin-top var(--time-down), height var(--time-down);
+}
+
+.SectionBoxWithPopup-hovered {
+    margin-top: var(--popup-hover-height);
+    transition: margin-bottom var(--time-down), margin-top var(--time-down), box-shadow var(--time-down);
+    box-shadow: 5px 10px #6EA3AC;
+}
+
+.SectionBox-popup-clicked {
+    margin-top: calc(-1 * var(--popup-click-height));
+    height: var(--popup-click-height);
+    
+}
+
+.SectionBoxWithPopup-clicked {
+    margin-top: var(--popup-click-height);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    :root {
+        --popup-click-height:300px;
+        --video-height:200px;
+    }
+
+    .SectionBoxWithPopup-tab {
+        font-size:12px;
+    }
+
+    .SectionBoxWithPopup-text h1 {
+        margin-bottom: 10px;
+    }
+
+    .SectionBoxWithPopup-text {
+        font-size:15px;
+    }
+
+    .SectionBoxWithPopup-links {
+        text-align: center;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .SectionBoxWithPopup-tab {
+        font-size:10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .SectionBoxWithPopup-text {
+        font-size:15px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .SectionBoxWithPopup-text {
+        font-size:20px;
+    }
+    .SectionBoxWithPopup-tab {
+        font-size:20px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/* @media only screen and (min-width: 1200px) {
+
+} */

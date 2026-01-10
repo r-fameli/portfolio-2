@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './FloatingBoxExpandable.scss';
 
 type Props = {
     title: string,

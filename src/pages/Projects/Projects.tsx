@@ -1,5 +1,5 @@
-import FloatingBoxExpandable from "../../components/FloatingBox/FloatingBoxExpandable";
 import TronDemo from '../../assets/videos/tron-demo.mp4'
+import SectionBoxWithPopup from "../../components/FloatingBox/SectionBoxWithPopup";
 
 const Projects = () => {
     const tronDescription = <div>
@@ -19,7 +19,7 @@ const Projects = () => {
     return <div className="page">
         <h1 className="text-center">projects</h1>
         <div className="floating-box-container">
-            <FloatingBoxExpandable title={"Tron Bot"} content={tronDescription} video={TronDemo} videoId={0} />
+            <SectionBoxWithPopup title={"Tron Bot"} content={tronDescription} video={TronDemo} videoId={0} />
         </div>
     </div>
 };
