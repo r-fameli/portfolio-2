@@ -139,7 +139,7 @@
 .FloatingBoxExpandable-hovered {
     margin-top: var(--popup-hover-height);
     transition: margin-bottom var(--time-down), margin-top var(--time-down), box-shadow var(--time-down);
-    box-shadow: 5px 10px #6EA3AC;
+    box-shadow: 5px 10px variables.$color-shade;
 }
 
 .FloatingBoxExpandable-popup-clicked {
