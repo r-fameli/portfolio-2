@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SectionBoxWithPopup.scss';
+import './FloatingBoxExpandable.scss';
 
 type Props = {
     title: string,
@@ -9,42 +9,42 @@ type Props = {
     repoLink?: string,
 }
 
-function SectionBoxWithPopup({ title, content, video, videoId, repoLink }: Props) {
+function FloatingBoxExpandable({ title, content, video, videoId, repoLink }: Props) {
     const videoStringId = "demo-video-" + videoId;
-    const [sectionBoxClass, setSectionBoxClass] = useState("SectionBoxWithPopup");
-    const [popupClass, setPopupClass] = useState<string>("SectionBox-popup");
+    const [sectionBoxClass, setSectionBoxClass] = useState("FloatingBoxExpandable");
+    const [popupClass, setPopupClass] = useState<string>("FloatingBoxPopup");
     const [isExpanded, setIsExpanded] = useState(false);
     const [suppressExpand, setSuppressExpand] = useState(false);
 
     function handleMouseEnter() {
         if (!isExpanded) {
-            setSectionBoxClass("SectionBoxWithPopup SectionBoxWithPopup-hovered")
-            setPopupClass("SectionBox-popup SectionBox-popup-hovered")
+            setSectionBoxClass("FloatingBoxExpandable FloatingBoxExpandable-hovered")
+            setPopupClass("FloatingBoxPopup FloatingBoxPopup-hovered")
         }
     }
 
     function handleMouseLeave() {
         if (!isExpanded) {
-            setSectionBoxClass("SectionBoxWithPopup")
-            setPopupClass("SectionBox-popup")
+            setSectionBoxClass("FloatingBoxExpandable")
+            setPopupClass("FloatingBoxPopup")
         }
     }
 
     function handleClick() {
-        const clickedClass = "SectionBoxWithPopup-clicked"
+        const clickedClass = "FloatingBoxExpandable-clicked"
         if (!suppressExpand) {
             if (sectionBoxClass.indexOf(clickedClass) === -1) {
                 setIsExpanded(true)
                 // Update classes
-                setSectionBoxClass("SectionBoxWithPopup SectionBoxWithPopup-clicked")
-                setPopupClass("SectionBox-popup SectionBox-popup-clicked")
+                setSectionBoxClass("FloatingBoxExpandable FloatingBoxExpandable-clicked")
+                setPopupClass("FloatingBoxPopup FloatingBoxPopup-clicked")
                 // Play the demo video
                 (document.querySelector('#' + videoStringId) as HTMLMediaElement).play()
             } else {
                 setIsExpanded(false)
                 // Update classes
-                setSectionBoxClass("SectionBoxWithPopup SectionBoxWithPopup-hovered")
-                setPopupClass("SectionBox-popup SectionBox-popup-hovered")
+                setSectionBoxClass("FloatingBoxExpandable FloatingBoxExpandable-hovered")
+                setPopupClass("FloatingBoxPopup FloatingBoxPopup-hovered")
                 // Pause the demo video
                 (document.querySelector('#' + videoStringId) as HTMLMediaElement).pause()
             }
@@ -58,17 +58,17 @@ function SectionBoxWithPopup({ title, content, video, videoId, repoLink }: Props
             onMouseLeave={handleMouseLeave}
             onClick={handleClick}
         >
-            <div className="SectionBoxWithPopup-text">
+            <div className="FloatingBoxExpandable-text">
                 <h1>{title}</h1>
                 {content}
                 <div 
-                className="SectionBoxWithPopup-links"
+                className="FloatingBoxExpandable-links"
                 onMouseEnter={() => setSuppressExpand(true)}
                 onMouseLeave={() => setSuppressExpand(false)}
                 >
                     {repoLink ? 
                     <a href={repoLink} target="_blank" rel="noreferrer">
-                        <button className="SectionBoxWithPopup-link-btn">repo</button>
+                        <button className="FloatingBoxExpandable-link-btn">repo</button>
                     </a>
                     :
                     <div></div>
@@ -77,12 +77,12 @@ function SectionBoxWithPopup({ title, content, video, videoId, repoLink }: Props
                 </div>
             </div>
             <div className={popupClass}>
-                <div className="SectionBoxWithPopup-tab">
+                <div className="FloatingBoxExpandable-tab">
                     {isExpanded ? 'Click to hide demo' : "Click to show demo"}
                 </div>
-                <div className="SectionBoxWithPopup-frame">
+                <div className="FloatingBoxExpandable-frame">
                     <video
-                        className="SectionBoxWithPopup-video"
+                        className="FloatingBoxExpandable-video"
                         id={videoStringId}
                         muted
                         loop
@@ -96,4 +96,4 @@ function SectionBoxWithPopup({ title, content, video, videoId, repoLink }: Props
     )
 }
 
-export default SectionBoxWithPopup;
+export default FloatingBoxExpandable;

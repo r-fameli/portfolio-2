@@ -9,11 +9,11 @@
     --tab-color:#A2D2D2;
 }
 
-.SectionBoxWithPopup {
+.FloatingBoxExpandable {
     width: 80%;
 }
 
-.SectionBoxWithPopup-text {
+.FloatingBoxExpandable-text {
     background-color: #8AC6D1;
     padding-left: 30px;
     padding-right: 30px;
@@ -27,25 +27,25 @@
     font-size: 18px;
 }
 
-.SectionBoxWithPopup-text p {
+.FloatingBoxExpandable-text p {
     font-size: inherit;
 }
 
-.SectionBoxWithPopup-text h1 {
+.FloatingBoxExpandable-text h1 {
     margin-bottom: 10px;
     text-align:center;
     font-size: var(--box-heading-size);
 }
 
-.SectionBoxWithPopup-text ul li {
+.FloatingBoxExpandable-text ul li {
     margin-left:20px;
 }
 
-.SectionBoxWithPopup-links {
+.FloatingBoxExpandable-links {
     text-align: right;
 }
 
-.SectionBoxWithPopup-link-btn {
+.FloatingBoxExpandable-link-btn {
     background: whitesmoke;
     border: 3px solid lightblue; /* purple: #6e6fac */
     width: 150px;
@@ -57,12 +57,12 @@
     transition: border 0.3s;
 }
 
-.SectionBoxWithPopup-link-btn:hover {
+.FloatingBoxExpandable-link-btn:hover {
     cursor: help;
     border: 6px solid lightblue;
 }
 
-.SectionBoxWithPopup-frame {
+.FloatingBoxExpandable-frame {
     display:flex;
     flex-direction: column;
     background-color: var(--tab-color);
@@ -70,7 +70,7 @@
     padding-bottom: 50px;
 }
 
-.SectionBoxWithPopup-tab {
+.FloatingBoxExpandable-tab {
     text-align:center;
     background-color:var(--tab-color);
     width: 40%;
@@ -83,7 +83,7 @@
     border-top-right-radius: var(--br);
 }
 
-.SectionBoxWithPopup {
+.FloatingBoxExpandable {
     width:80%;
     display:flex;
     justify-content: center;
@@ -92,7 +92,7 @@
     transition: margin-bottom var(--time-up), margin-top var(--time-up), box-shadow var(--time-up);
 }
 
-.SectionBox-popup {
+.FloatingBoxPopup {
     position:absolute;
     z-index: 0;
     overflow:hidden;
@@ -101,37 +101,37 @@
     transition: margin-top var(--time-up), height var(--time-up);
 }
 
-.SectionBoxWithPopup-image {
+.FloatingBoxExpandable-image {
     width: 100%;
     height: var(--popup-click-height)
 }
 
-.SectionBoxWithPopup-video {
+.FloatingBoxExpandable-video {
     background-color: #91C6CF;
     width: 100%;
     height: var(--video-height);
     display: block;
 }
 
-.SectionBox-popup-hovered {
+.FloatingBoxPopup-hovered {
     margin-top: calc(-1 * var(--popup-hover-height));
     height: var(--popup-hover-height);
     transition: margin-top var(--time-down), height var(--time-down);
 }
 
-.SectionBoxWithPopup-hovered {
+.FloatingBoxExpandable-hovered {
     margin-top: var(--popup-hover-height);
     transition: margin-bottom var(--time-down), margin-top var(--time-down), box-shadow var(--time-down);
     box-shadow: 5px 10px #6EA3AC;
 }
 
-.SectionBox-popup-clicked {
+.FloatingBoxPopup-clicked {
     margin-top: calc(-1 * var(--popup-click-height));
     height: var(--popup-click-height);
     
 }
 
-.SectionBoxWithPopup-clicked {
+.FloatingBoxExpandable-clicked {
     margin-top: var(--popup-click-height);
 }
 
@@ -142,43 +142,43 @@
         --video-height:200px;
     }
 
-    .SectionBoxWithPopup-tab {
+    .FloatingBoxExpandable-tab {
         font-size:12px;
     }
 
-    .SectionBoxWithPopup-text h1 {
+    .FloatingBoxExpandable-text h1 {
         margin-bottom: 10px;
     }
 
-    .SectionBoxWithPopup-text {
+    .FloatingBoxExpandable-text {
         font-size:15px;
     }
 
-    .SectionBoxWithPopup-links {
+    .FloatingBoxExpandable-links {
         text-align: center;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .SectionBoxWithPopup-tab {
+    .FloatingBoxExpandable-tab {
         font-size:10px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .SectionBoxWithPopup-text {
+    .FloatingBoxExpandable-text {
         font-size:15px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .SectionBoxWithPopup-text {
+    .FloatingBoxExpandable-text {
         font-size:20px;
     }
-    .SectionBoxWithPopup-tab {
+    .FloatingBoxExpandable-tab {
         font-size:20px;
     }
 }

@@ -1,5 +1,5 @@
 import TronDemo from '../../assets/videos/tron-demo.mp4'
-import SectionBoxWithPopup from "../../components/FloatingBox/SectionBoxWithPopup";
+import SectionBoxWithPopup from "../../components/FloatingBox/FloatingBoxExpandable";
 
 const Projects = () => {
     const tronDescription = <div>
