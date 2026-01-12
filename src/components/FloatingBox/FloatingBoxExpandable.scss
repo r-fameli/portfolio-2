@@ -1,3 +1,4 @@
+@use '../../variables';
 
 :root {
     --popup-click-height:500px;
@@ -6,15 +7,15 @@
     --time-hover:1s;
     --time-down:1s;
     --time-up:1s;
-    --tab-color:#A2D2D2;
 }
 
 .FloatingBoxExpandable {
     width: 80%;
+    border: 1px solid variables.$color-border;
 }
 
 .FloatingBoxExpandable-text {
-    background-color: #8AC6D1;
+    background-color: variables.$color-back;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 20px;
@@ -47,7 +48,7 @@
 
 .FloatingBoxExpandable-link-btn {
     background: whitesmoke;
-    border: 3px solid lightblue; /* purple: #6e6fac */
+    border: 3px solid variables.$color-border; /* purple: #6e6fac */
     width: 150px;
     height: 40px;
     border-radius: 5px;
@@ -59,20 +60,23 @@
 
 .FloatingBoxExpandable-link-btn:hover {
     cursor: help;
-    border: 6px solid lightblue;
+    border: 6px solid variables.$color-border;
 }
 
 .FloatingBoxExpandable-frame {
     display:flex;
     flex-direction: column;
-    background-color: var(--tab-color);
+    background-color: variables.$color-shade;
+    border: 1px solid variables.$color-border;
     padding: 30px;
     padding-bottom: 50px;
 }
 
 .FloatingBoxExpandable-tab {
     text-align:center;
-    background-color:var(--tab-color);
+    background-color:variables.$color-shade;
+    border: 1px solid variables.$color-border;
+    border-bottom-width: 0;
     width: 40%;
     font-size: 30px;
     padding: 5px;
@@ -107,7 +111,7 @@
 }
 
 .FloatingBoxExpandable-video {
-    background-color: #91C6CF;
+    background-color: variables.$color-shade;
     width: 100%;
     height: var(--video-height);
     display: block;
@@ -122,7 +126,7 @@
 .FloatingBoxExpandable-hovered {
     margin-top: var(--popup-hover-height);
     transition: margin-bottom var(--time-down), margin-top var(--time-down), box-shadow var(--time-down);
-    box-shadow: 5px 10px #6EA3AC;
+    box-shadow: 5px 10px variables.$color-shade;
 }
 
 .FloatingBoxPopup-clicked {
