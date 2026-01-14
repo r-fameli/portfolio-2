@@ -32,11 +32,10 @@ $small-circle-li-size: 150px;
     margin-left: calc(-1 / 2 * $big-circle-size);
     top: 50%;
     margin-top: calc(-1 / 2 * $big-circle-size);
-    background-color: var(--bg4);
+    background-color: variables.$color-accent;
 }
 
 .little-circles {
-  /*   background-color: var(--bg2); */
   --size: 300px;
   z-index: 1;
 
