@@ -44,9 +44,6 @@ const CirclingIcons = ({ numCircles }: Props) => {
     // Velocity Variables
     // velocity units are degrees per second
     const VELOCITY_BASE = 15;
-    const VELOCITY_MAX = 200;
-    const VELOCITY_MIN = -1 * VELOCITY_MAX;
-    const SLOWDOWN_FACTOR = 0.95; // Used for velocity calculations
 
     // STATES
     const [velocity, setVelocity] = useState(VELOCITY_BASE);
@@ -65,7 +62,7 @@ const CirclingIcons = ({ numCircles }: Props) => {
 
     return <div className="CirclingIcons">
         <div className="circling-icons-frame">
-            <div className="big-circle" />
+            <div className="big-circle"></div>
             <ul className="little-circles">
                 {circlePositions.map(([x, y], i) => (
                     <li
@@ -74,7 +71,7 @@ const CirclingIcons = ({ numCircles }: Props) => {
                             transform: `translate3d(${x}px, ${y}px, 0)`,
                             transition: 'transform 0.1s ease-out',
                             fontSize: '10px',
-                        }}>{x}, {y}</li>
+                        }}></li>
                 ))}
             </ul>
         </div>

@@ -32,10 +32,11 @@ $small-circle-li-size: 150px;
     margin-left: calc(-1 / 2 * $big-circle-size);
     top: 50%;
     margin-top: calc(-1 / 2 * $big-circle-size);
-    background-color: variables.$color-accent;
+    background-color: variables.$color-border;
 }
 
 .little-circles {
+  padding: 0;
   --size: 300px;
   z-index: 1;
 
@@ -64,7 +65,7 @@ $small-circle-li-size: 150px;
   transform-origin: center;
 
   /* Set it to be in the center of bigCircle */
-  transform: translate3d(150px, 150px, 0);
+  transform: translate3d($big-circle-size / 2, $big-circle-size / 2, 0);
   background-color: variables.$color-accent;
   font-size: 50px;
   color: black;
