@@ -1,36 +1,33 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import './CirclingIcons.scss';
+import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 
-// Custom hook for smooth animations
-const useAnimationFrame = (callback: (deltaTime: number) => void) => {
-    const requestRef = useRef<number>(undefined);
-    const previousTimeRef = useRef<number>(undefined);
+// Placing Constants, in pixels and degrees
+const CENTER = 150;
+const DIST_TO_CENTER = 250; // Distance to center
+const ROTATION_OFFSET = 45;
+const DIST_X_OFFSET = 20;
+const DIST_Y_OFFSET = -100;
 
-    const animate = (time: number) => {
-        if (previousTimeRef.current !== undefined) {
-            const deltaTime = time - previousTimeRef.current;
-            callback(deltaTime);
-        }
-        previousTimeRef.current = time;
-        requestRef.current = requestAnimationFrame(animate);
-    };
-
-    useEffect(() => {
-        requestRef.current = requestAnimationFrame(animate);
-        return () => cancelAnimationFrame(requestRef.current as number);
-    }, []);
-};
+const radians = (degrees: number) => degrees * (Math.PI / 180)
 
 const getCirclePositions = (numCircles: number, offset: number) => {
-    // Placing Constants
-    const CENTER = 150;
-    const DISTANCE = 250;
     const angleSteps = 360 / numCircles;
     const positions = new Array(numCircles);
+    const rotationOffsetRadians = radians(ROTATION_OFFSET);
     for (let i = 0; i < numCircles; i++) {
         const angle = offset + angleSteps * i;
-        const x = CENTER + DISTANCE * Math.cos(angle * (Math.PI / 180));
-        const y = CENTER + DISTANCE * Math.sin(angle * (Math.PI / 180));
+        const xBeforeRot = (DIST_TO_CENTER + DIST_X_OFFSET) + Math.cos(radians(angle));
+        const yBeforeRot = (DIST_TO_CENTER + DIST_Y_OFFSET) + Math.sin(radians(angle));
+        // Apply rotation to tilt the moons on an axis
+        const cosRot = Math.cos(rotationOffsetRadians);
+        const sinRot = Math.sin(rotationOffsetRadians);
+        const x = CENTER + (xBeforeRot * cosRot - yBeforeRot * sinRot);
+        const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot);
+
+        // Without axis rotation:
+        // const x = CENTER + (DIST_TO_CENTER) * Math.cos(radians(angle));
+        // const y = CENTER + (DIST_TO_CENTER) * Math.sin(radians(angle));
         positions[i] = [x, y]
     };
     return positions
@@ -71,6 +68,7 @@ const CirclingIcons = ({ numCircles }: Props) => {
                             transform: `translate3d(${x}px, ${y}px, 0)`,
                             transition: 'transform 0.1s ease-out',
                             fontSize: '10px',
+                            zIndex: 20,
                         }}></li>
                 ))}
             </ul>

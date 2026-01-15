@@ -23,7 +23,7 @@ $small-circle-li-size: 150px;
 }
 
 .big-circle {
-    z-index: 2;
+    z-index: 1;
     border-radius: 50%;
     width: $big-circle-size;
     height: $big-circle-size;
@@ -38,7 +38,6 @@ $small-circle-li-size: 150px;
 .little-circles {
   padding: 0;
   --size: 300px;
-  z-index: 1;
 
   position: absolute;
 
