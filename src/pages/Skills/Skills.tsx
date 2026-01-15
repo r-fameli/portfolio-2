@@ -3,7 +3,7 @@ import './Skills.scss';
 
 const Skills = () => {
     return <div className="page">
-        <CirclingIcons />
+        <CirclingIcons numCircles={6} />
     </div>
 }
 

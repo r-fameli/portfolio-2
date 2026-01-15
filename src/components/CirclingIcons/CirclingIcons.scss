@@ -65,7 +65,7 @@ $small-circle-li-size: 150px;
 
   /* Set it to be in the center of bigCircle */
   transform: translate3d(150px, 150px, 0);
-  background-color: var(--bg3);
+  background-color: variables.$color-accent;
   font-size: 50px;
   color: black;
   display: block;
