@@ -4,10 +4,10 @@ import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 
 // Placing Constants, in pixels and degrees
 const CENTER = 150;
-const DIST_TO_CENTER = 250; // Distance to center
-const ROTATION_OFFSET = 45;
+const DIST_TO_CENTER = 300; // Distance to center
+const ROTATION_OFFSET = 10;
 const DIST_X_OFFSET = 20;
-const DIST_Y_OFFSET = -100;
+const DIST_Y_OFFSET = -200;
 
 const radians = (degrees: number) => degrees * (Math.PI / 180)
 
@@ -16,19 +16,19 @@ const getCirclePositions = (numCircles: number, offset: number) => {
     const positions = new Array(numCircles);
     const rotationOffsetRadians = radians(ROTATION_OFFSET);
     for (let i = 0; i < numCircles; i++) {
-        const angle = offset + angleSteps * i;
-        const xBeforeRot = (DIST_TO_CENTER + DIST_X_OFFSET) + Math.cos(radians(angle));
-        const yBeforeRot = (DIST_TO_CENTER + DIST_Y_OFFSET) + Math.sin(radians(angle));
+        const angle = (offset + angleSteps * i) % 360;
+        
+        const xBeforeRot = (DIST_TO_CENTER + DIST_X_OFFSET) * Math.cos(radians(angle));
+        const yBeforeRot = (DIST_TO_CENTER + DIST_Y_OFFSET) * Math.sin(radians(angle));
+        
         // Apply rotation to tilt the moons on an axis
         const cosRot = Math.cos(rotationOffsetRadians);
         const sinRot = Math.sin(rotationOffsetRadians);
         const x = CENTER + (xBeforeRot * cosRot - yBeforeRot * sinRot);
         const y = CENTER + (xBeforeRot * sinRot + yBeforeRot * cosRot);
-
-        // Without axis rotation:
-        // const x = CENTER + (DIST_TO_CENTER) * Math.cos(radians(angle));
-        // const y = CENTER + (DIST_TO_CENTER) * Math.sin(radians(angle));
-        positions[i] = [x, y]
+        // z-index
+        const z = angle < 180 ? 5 : 0;
+        positions[i] = [x, y, z]
     };
     return positions
 }
@@ -61,14 +61,14 @@ const CirclingIcons = ({ numCircles }: Props) => {
         <div className="circling-icons-frame">
             <div className="big-circle"></div>
             <ul className="little-circles">
-                {circlePositions.map(([x, y], i) => (
+                {circlePositions.map(([x, y, zIndex], i) => (
                     <li
                         key={i}
                         style={{
                             transform: `translate3d(${x}px, ${y}px, 0)`,
                             transition: 'transform 0.1s ease-out',
                             fontSize: '10px',
-                            zIndex: 20,
+                            zIndex: zIndex,
                         }}></li>
                 ))}
             </ul>

@@ -6,33 +6,33 @@ $small-circle-li-size: 150px;
 
 
 .CirclingIcons {
-    height: 100vh;
-    position: relative;
+  height: 100vh;
+  position: relative;
 }
 
 .circling-icons-frame {
-    pointer-events: none;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: calc(-1 / 2 * 100vw);
-    margin-top: calc(-1 / 2 * 100vh);
-    overflow: hidden;
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: calc(-1 / 2 * 100vw);
+  margin-top: calc(-1 / 2 * 100vh);
+  overflow: hidden;
 }
 
 .big-circle {
-    z-index: 1;
-    border-radius: 50%;
-    width: $big-circle-size;
-    height: $big-circle-size;
-    position: absolute;
-    left: 50%;
-    margin-left: calc(-1 / 2 * $big-circle-size);
-    top: 50%;
-    margin-top: calc(-1 / 2 * $big-circle-size);
-    background-color: variables.$color-border;
+  z-index: 1;
+  border-radius: 50%;
+  width: $big-circle-size;
+  height: $big-circle-size;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1 / 2 * $big-circle-size);
+  top: 50%;
+  margin-top: calc(-1 / 2 * $big-circle-size);
+  background-color: variables.$color-border;
 }
 
 .little-circles {
@@ -52,7 +52,7 @@ $small-circle-li-size: 150px;
 }
 
 .little-circles li:first-child {
-  background-color: orange;
+  // background-color: orange;
 }
 
 
@@ -77,5 +77,4 @@ $small-circle-li-size: 150px;
   text-align: center;
   margin-left: calc(-1 / 2 * var(--size));
   margin-top: calc(-1 / 2 * var(--size));
-  z-index: 4;
 }
