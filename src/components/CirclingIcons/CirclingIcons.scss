@@ -1,8 +1,8 @@
 @use '../../variables';
 
-$big-circle-size: 250px;
+$big-circle-size: 300px;
 $little-circles-frame-size: 300px;
-$small-circle-li-size: 150px;
+$small-circle-size: 120px;
 
 
 .CirclingIcons {
@@ -15,7 +15,7 @@ $small-circle-li-size: 150px;
   width: 100vw;
   height: 100vh;
   position: absolute;
-  left: 50%;
+  left: 35%;
   top: 50%;
   margin-left: calc(-1 / 2 * 100vw);
   margin-top: calc(-1 / 2 * 100vh);
@@ -71,10 +71,10 @@ $small-circle-li-size: 150px;
   display: block;
   position: absolute;
   border-radius: 50%;
-  width: var(--size);
-  height: var(--size);
-  line-height: var(--size);
+  width: $small-circle-size;
+  height: $small-circle-size;
+  line-height: $small-circle-size;
   text-align: center;
-  margin-left: calc(-1 / 2 * var(--size));
-  margin-top: calc(-1 / 2 * var(--size));
+  margin-left: calc(-1 / 2 * $small-circle-size);
+  margin-top: calc(-1 / 2 * $small-circle-size);
 }

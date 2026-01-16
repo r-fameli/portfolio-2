@@ -4,10 +4,10 @@ import { useAnimationFrame } from '../../hooks/useAnimationFrame';
 
 // Placing Constants, in pixels and degrees
 const CENTER = 150;
-const DIST_TO_CENTER = 300; // Distance to center
+const DIST_TO_CENTER = 350; // Distance to center
 const ROTATION_OFFSET = 10;
 const DIST_X_OFFSET = 20;
-const DIST_Y_OFFSET = -200;
+const DIST_Y_OFFSET = -260;
 
 const radians = (degrees: number) => degrees * (Math.PI / 180)
 

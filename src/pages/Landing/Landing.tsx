@@ -1,16 +1,16 @@
+import CirclingIcons from '../../components/CirclingIcons/CirclingIcons';
 import './Landing.scss'
 
 const Landing = () => {
     return <div className="page" id="landing-page">
-        <div id="landing">
-            <div className="intro">
-                <div className="text-center title">Riki Fameli</div>
-                <div className="h-center">
-                    <hr />
-                </div>
-                <div className="text-center subtitle">full stack software engineer</div>
-            </div>
+        <CirclingIcons numCircles={8} />
+        <div className="intro">
+            <div className="text-center title">Riki Fameli</div>
+            <div className="text-center subtitle">full stack software engineer</div>
         </div>
+        
+        {/* <div id="landing">
+        </div> */}
     </div>
 }
 
