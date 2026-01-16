@@ -10,7 +10,7 @@ const brownTAContent = <ul>
 
 const Experience = () => {
     return <div className="page">
-        <h1 className="text-center">experience</h1>
+        <h1 className="text-center page-title">experience</h1>
         <div className="floating-box-container">
             <FloatingBox title={"Microsoft, Azure Storage"} subtitle={"Software Engineer"} datesString={"Aug 2023 - Sept 2025"} content={msftContent} />
             <FloatingBox title={"Brown University Dept. of Computer Science"} subtitle={"Undergraduate Teaching Assistant"} datesString={"Sep 2021 - Dec 2023"} content={brownTAContent} />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './FloatingBoxExpandable.scss';
+import './FloatingBox.scss'
 
 type Props = {
     title: string,
@@ -59,7 +60,11 @@ function FloatingBoxExpandable({ title, content, video, videoId, repoLink }: Pro
             onClick={handleClick}
         >
             <div className="FloatingBoxExpandable-text">
-                <h1>{title}</h1>
+                <span className="FloatingBox-titling">
+                    <h2>{title}</h2>
+                    
+                </span>
+
                 {content}
                 <div 
                 className="FloatingBoxExpandable-links"

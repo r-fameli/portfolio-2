@@ -17,7 +17,7 @@ const Projects = () => {
     </div>
 
     return <div className="page">
-        <h1 className="text-center">projects</h1>
+        <h1 className="text-center page-title">projects</h1>
         <div className="floating-box-container">
             <SectionBoxWithPopup title={"Tron Bot"} content={tronDescription} video={TronDemo} videoId={0} />
         </div>

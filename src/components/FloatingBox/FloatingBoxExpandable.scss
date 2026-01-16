@@ -16,16 +16,16 @@
 
 .FloatingBoxExpandable-text {
     background-color: variables.$color-back;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 20px;
-    padding-bottom: 30px;
+    padding: 10px;
+    // padding-left: 30px;
+    // padding-right: 30px;
+    // padding-top: 20px;
+    // padding-bottom: 30px;
     vertical-align: top;
     width: 100%;
     position:relative;
     z-index:1;
     overflow: hidden;
-    font-size: 18px;
 }
 
 .FloatingBoxExpandable-text p {
@@ -35,11 +35,10 @@
 .FloatingBoxExpandable-text h1 {
     margin-bottom: 10px;
     text-align:center;
-    font-size: var(--box-heading-size);
 }
 
 .FloatingBoxExpandable-text ul li {
-    margin-left:20px;
+    // margin-left:20px;
 }
 
 .FloatingBoxExpandable-links {
@@ -54,7 +53,6 @@
     border-radius: 5px;
     margin-top: 15px;
     font:inherit;
-    font-size: 20px;
     transition: border 0.3s;
 }
 
@@ -77,11 +75,10 @@
     background-color:variables.$color-shade;
     border: 1px solid variables.$color-border;
     border-bottom-width: 0;
-    width: 40%;
-    font-size: 30px;
+    width: 30%;
     padding: 5px;
     margin-left: auto;
-    margin-right: auto;
+    // margin-right: auto;
     --br:5px;
     border-top-left-radius: var(--br);
     border-top-right-radius: var(--br);
@@ -91,7 +88,7 @@
     width:80%;
     display:flex;
     justify-content: center;
-    margin: 20px;
+    // margin: 20px;
     min-height: 100px;
     transition: margin-bottom var(--time-up), margin-top var(--time-up), box-shadow var(--time-up);
 }
@@ -166,21 +163,21 @@
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .FloatingBoxExpandable-tab {
-        font-size:10px;
+        // font-size:10px;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .FloatingBoxExpandable-text {
-        font-size:15px;
+        // font-size:15px;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
     .FloatingBoxExpandable-text {
-        font-size:20px;
+        // font-size:20px;
     }
     .FloatingBoxExpandable-tab {
         font-size:20px;
