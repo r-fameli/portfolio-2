@@ -7,10 +7,13 @@ const Landing = () => {
         <div className="intro">
             <div className="text-center title">Riki Fameli</div>
             <div className="text-center subtitle">full stack software engineer</div>
+            <div className="landing-list">
+                <div>resume</div>
+                <div>mail</div>
+                <div>github</div>
+                <div>linkedin</div>
+            </div>
         </div>
-        
-        {/* <div id="landing">
-        </div> */}
     </div>
 }
 
