@@ -1,6 +1,7 @@
 import './App.scss';
 import Experience from './pages/Experience/Experience';
 import Landing from './pages/Landing/Landing';
+import NewProjects from './pages/NewProjects/NewProjects';
 import Projects from './pages/Projects/Projects';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Landing />
       <Experience />
       <Projects />
+      <NewProjects />
     </body>
   )
 }

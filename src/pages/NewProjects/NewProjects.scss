@@ -1,0 +1,36 @@
+@use '../../variables';
+
+
+.video-gallery {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-spacer {
+    height: 30vh;
+    display: flex;
+    position: static;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.vertical-item-layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.video-card {
+    overflow: hidden;
+    max-height: 100cqw;
+    max-width: 50cqw;
+}
+
+.video-card video {
+    max-height: 100%;
+}
