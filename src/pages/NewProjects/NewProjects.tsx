@@ -1,14 +1,31 @@
 import './NewProjects.scss';
 import SockyDemo from '../../assets/videos/socky-demo.mp4';
-import VideoCard from './VideoCard';
 import TronDemo from '../../assets/videos/tron-demo.mp4'
 
 type SpacerProps = {
     children: React.ReactNode;
 }
+
 const VerticalSpacer = ({ children }: SpacerProps) => {
     return <div className="vertical-spacer">
         {children}
+    </div>
+}
+
+type VideoCardProps = {
+    video: string,
+    id: number,
+}
+
+const VideoCard = ({ video, id }: VideoCardProps) => {
+    return <div className="video-card" id={`video-${id}`}>
+        <video
+            autoPlay
+            muted
+            loop
+        >
+            <source src={video} />
+        </video>
     </div>
 }
 

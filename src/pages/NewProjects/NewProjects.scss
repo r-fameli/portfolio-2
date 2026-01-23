@@ -26,11 +26,20 @@
 }
 
 .video-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
-    max-height: 100cqw;
-    max-width: 50cqw;
+    // max-height: 100%;
+    // height: 20vh;
+    width: 30vw;
+    // max-height: 100cqw;
+    // max-width: 100%;
 }
 
+
 .video-card video {
-    max-height: 100%;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
 }
