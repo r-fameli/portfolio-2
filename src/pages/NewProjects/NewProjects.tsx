@@ -1,49 +1,32 @@
 import './NewProjects.scss';
 import SockyDemo from '../../assets/videos/socky-demo.mp4';
 import TronDemo from '../../assets/videos/tron-demo.mp4'
+import GalleryItem from './GalleryItem';
 
 type SpacerProps = {
     children: React.ReactNode;
+    xOffset?: number;
+    yOffset?: number;
 }
 
-const VerticalSpacer = ({ children }: SpacerProps) => {
-    return <div className="vertical-spacer">
+const GalleryRow = ({ children, xOffset, yOffset }: SpacerProps) => {
+    return <div className="vertical-row">
         {children}
-    </div>
-}
-
-type VideoCardProps = {
-    video: string,
-    id: number,
-}
-
-const VideoCard = ({ video, id }: VideoCardProps) => {
-    return <div className="video-card" id={`video-${id}`}>
-        <video
-            autoPlay
-            muted
-            loop
-        >
-            <source src={video} />
-        </video>
     </div>
 }
 
 const NewProjects = () => {
     return <div className="page">
         <div className="video-gallery">
-            <VerticalSpacer>
-                <div className="vertical-item-layout">
-                    <VideoCard video={SockyDemo} id={1} />
-                </div>
-            </VerticalSpacer>
-            <VerticalSpacer>
-                <div className="vertical-item-layout">
-                    <VideoCard video={TronDemo} id={2} />
-                </div>
-            </VerticalSpacer>
-        </div>
-        <div className="project-modal">
+            <GalleryRow>
+                <GalleryItem video={SockyDemo} id={1} caption={"socky"} captionSpot="topleft"/>
+            </GalleryRow>
+            <GalleryRow>
+                <GalleryItem video={TronDemo} id={2} caption={"tron bot"} captionSpot="bottomright"/>
+            </GalleryRow>
+            <GalleryRow>
+                <GalleryItem video={SockyDemo} id={3} caption={"socky II"} captionSpot="bottomleft"/>
+            </GalleryRow>
         </div>
     </div>
 }

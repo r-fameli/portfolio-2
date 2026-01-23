@@ -8,7 +8,7 @@ type Props = {
 const VideoCard = ({ video, id }: Props) => {
     return <div className="video-card" id={`video-${id}`}>
         <video
-            autoPlay
+            // autoPlay
             muted
             loop
         >

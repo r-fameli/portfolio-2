@@ -9,7 +9,7 @@ function App() {
     <body>
       <Landing />
       <Experience />
-      <Projects />
+      {/* <Projects /> */}
       <NewProjects />
     </body>
   )
