@@ -10,14 +10,13 @@
     padding: 10px;
     padding-bottom: 20px;
     background-color: #FAF7F0;
-    transition: box-shadow 0.7s, margin-top 1s, margin-left 1s;
+    transition: box-shadow 0.7s, transform 1s;
     border: 1.5px solid #4A4947;
 }
 
 .FloatingBox:hover {
     box-shadow: 5px 10px #D8D2C2;
-    margin-top:-1px;
-    margin-left:10px;
+    transform: translate(-1px, -10px);
 }
 
 .box-heading-flex {
