@@ -1,4 +1,4 @@
-import './NewProjects.scss';
+import './ProjectGallery';
 
 type Props = {
     video: string,

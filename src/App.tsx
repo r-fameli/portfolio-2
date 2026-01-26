@@ -1,8 +1,7 @@
 import './App.scss';
 import Experience from './pages/Experience/Experience';
 import Landing from './pages/Landing/Landing';
-import NewProjects from './pages/NewProjects/NewProjects';
-import Projects from './pages/Projects/Projects';
+import ProjectGallery from './pages/NewProjects/ProjectGallery';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
       <Landing />
       <Experience />
       {/* <Projects /> */}
-      <NewProjects />
+      <ProjectGallery />
     </body>
   )
 }
