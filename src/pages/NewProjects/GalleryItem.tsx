@@ -31,19 +31,15 @@ const GalleryItem = ({ id, source, type, caption, captionSpot = 'topleft', xOffs
     }
 
     const computedStyle = {
-        transform: `translate(${xOffset}%, ${yOffset}%) scale(${scale})`,
-        transformOrigin: transformOrigin,
+        transform: `translate(${xOffset}%, ${yOffset}%)`,
     }
 
-    const captionStyle = { transform: `translate(${xOffset}%, ${yOffset}%)`, transformOrigin: transformOrigin }
-
-
-    return <div className="vertical-item-layout">
-        {captionOnTop && <div className={captionClass} style={captionStyle}>
+    return <div className="vertical-item-layout" style={computedStyle}>
+        {captionOnTop && <div className={captionClass}>
             {caption}
         </div>}
-        <MediaCard id={id} source={source} type={type} style={computedStyle} />
-        {!captionOnTop && <div className={captionClass} style={captionStyle}>
+        <MediaCard id={id} source={source} type={type} scale={scale} />
+        {!captionOnTop && <div className={captionClass}>
             {caption}
         </div>}
     </div>

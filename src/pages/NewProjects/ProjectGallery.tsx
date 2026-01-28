@@ -55,7 +55,7 @@ const ProjectGallery = () => {
         yOffset: 40,
         scale: 1.3,
         caption: 'tron bot',
-        captionSpot: 'bottomright',
+        captionSpot: 'topleft',
     }
 
     const jtItem: PlacedGalleryItem = {
@@ -66,7 +66,7 @@ const ProjectGallery = () => {
         yOffset: 0,
         scale: 1.5,
         caption: 'journaltexter',
-        captionSpot: 'bottomright',
+        captionSpot: 'topleft',
     }
 
     const vtItem: PlacedGalleryItem = {
@@ -77,7 +77,7 @@ const ProjectGallery = () => {
         yOffset: 0,
         scale: 1,
         caption: 'visual transformers',
-        captionSpot: 'topright',
+        captionSpot: 'topleft',
     }
 
     return <div className="page">
