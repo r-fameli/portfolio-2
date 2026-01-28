@@ -1,4 +1,4 @@
-import MediaCard from "./VideoCard";
+import MediaCard from "./MediaCard";
 
 type GalleryItemProps = {
     id: number,
@@ -14,21 +14,6 @@ type GalleryItemProps = {
 const GalleryItem = ({ id, source, type, caption, captionSpot = 'topleft', xOffset, yOffset, scale = 1 }: GalleryItemProps) => {
     const captionOnTop = (captionSpot === 'topleft' || captionSpot === 'topright');
     const captionClass = (captionSpot === 'topleft' || captionSpot == 'bottomleft') ? 'left-caption' : 'right-caption';
-    let transformOrigin = null;
-    switch (captionSpot) {
-        case 'bottomleft':
-            transformOrigin = 'bottom left';
-            break;
-        case 'bottomright':
-            transformOrigin = 'bottom right';
-            break;
-        case 'topleft':
-            transformOrigin = 'top left';
-            break;
-        case 'topright':
-            transformOrigin = 'top right';
-            break;
-    }
 
     const computedStyle = {
         transform: `translate(${xOffset}%, ${yOffset}%)`,
