@@ -42,7 +42,7 @@ const ProjectGallery = () => {
         source: SockyDemo,
         xOffset: 0,
         yOffset: 0,
-        scale: 0.8,
+        scale: 1,
         caption: 'socky',
         captionSpot: 'topleft',
     }
@@ -51,9 +51,9 @@ const ProjectGallery = () => {
         id: 2,
         type: 'video',
         source: TronDemo,
-        xOffset: 25,
-        yOffset: 40,
-        scale: 1.3,
+        xOffset: -25,
+        yOffset: 20,
+        scale: 1,
         caption: 'tron bot',
         captionSpot: 'topleft',
     }
@@ -62,9 +62,9 @@ const ProjectGallery = () => {
         id: 3,
         type: 'video',
         source: JournalTexterDemo,
-        xOffset: 0,
-        yOffset: 0,
-        scale: 1.5,
+        xOffset: -30,
+        yOffset: -10,
+        scale: 1,
         caption: 'journaltexter',
         captionSpot: 'topleft',
     }
@@ -73,8 +73,8 @@ const ProjectGallery = () => {
         id: 4,
         type: 'img',
         source: VisualTransformersDemo,
-        xOffset: 0,
-        yOffset: 0,
+        xOffset: -10,
+        yOffset: 5,
         scale: 1,
         caption: 'visual transformers',
         captionSpot: 'topleft',
@@ -86,6 +86,8 @@ const ProjectGallery = () => {
             <div className="row-spacer-big"/>
             {/* <div className="row-spacer"/> */}
             <GalleryRow items={[jtItem, vtItem]} />
+            {/* <div className="row-spacer"/> */}
+            {/* <GalleryRow items={[vtItem]} /> */}
         </div>
     </div >
 }
