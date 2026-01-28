@@ -1,95 +1,88 @@
-import './ProjectGallery.scss';
-import SockyDemo from '../../assets/videos/socky-demo.mp4';
-import TronDemo from '../../assets/videos/tron-demo.mp4';
-import JournalTexterDemo from '../../assets/videos/journaltexter-demo.mp4';
-import VisualTransformersDemo from '../../assets/images/visual-transformers-poster.jpg';
-import GalleryItem from './GalleryItem';
+import "./ProjectGallery.scss";
+import SockyDemo from "../../assets/videos/socky-demo.mp4";
+import TronDemo from "../../assets/videos/tron-demo.mp4";
+import JournalTexterDemo from "../../assets/videos/journaltexter-demo.mp4";
+import VisualTransformersDemo from "../../assets/images/visual-transformers-poster.jpg";
+import MediaCard from "./MediaCard";
 
-// Projects:
-// Big/medium: Deep learning, Journaltexter, Socky, portfolios
-// Small: Tron bot, UI/UX portfolio
-
-type CaptionSpot = 'topleft' | 'topright' | 'bottomleft' | 'bottomright'
-
-type PlacedGalleryItem = {
+type GalleryItemDetails = {
     id: number;
-    type: 'video' | 'img';
+    type: "video" | "img";
     source: string;
-    xOffset: number;
-    yOffset: number;
-    scale: number;
     caption: string;
-    captionSpot: CaptionSpot;
-}
+};
 
 type RowProps = {
-    items: PlacedGalleryItem[]
-}
+    item1?: GalleryItemDetails;
+    item2?: GalleryItemDetails;
+};
 
-const GalleryRow = ({ items }: RowProps) => {
-    return <div className="vertical-row">
-        {items.map(({ id, type, source, xOffset, yOffset, scale, caption, captionSpot }) =>
-            <GalleryItem id={id} type={type} source={source} xOffset={xOffset} yOffset={yOffset} scale={scale} caption={caption} captionSpot={captionSpot} />
-        )
-        }
-    </div >
-}
+const GalleryRow = ({ item1, item2 }: RowProps) => {
+    return (
+        <div className="gallery-row">
+            <div className="flex-col-start">
+                {item1 && (
+                    <div className="gallery-item">
+                        <MediaCard
+                            id={item1.id}
+                            source={item1.source}
+                            type={item1.type}
+                        />
+                        <h3>{item1.caption}</h3>
+                    </div>
+                )}
+            </div>
+            <div className="flex-col-end">
+                {item2 && (
+                    <div className="gallery-item">
+                        <MediaCard
+                            id={item2.id}
+                            source={item2.source}
+                            type={item2.type}
+                        />
+                        <h3>{item2.caption}</h3>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+};
 
 const ProjectGallery = () => {
-    const sockyItem: PlacedGalleryItem = {
+    const sockyItem: GalleryItemDetails = {
         id: 1,
-        type: 'video',
+        type: "video",
         source: SockyDemo,
-        xOffset: 0,
-        yOffset: 0,
-        scale: 1,
-        caption: 'socky',
-        captionSpot: 'topleft',
-    }
+        caption: "socky",
+    };
 
-    const tronItem: PlacedGalleryItem = {
+    const tronItem: GalleryItemDetails = {
         id: 2,
-        type: 'video',
+        type: "video",
         source: TronDemo,
-        xOffset: -25,
-        yOffset: 20,
-        scale: 1,
-        caption: 'tron bot',
-        captionSpot: 'topleft',
-    }
+        caption: "tron bot",
+    };
 
-    const jtItem: PlacedGalleryItem = {
+    const jtItem: GalleryItemDetails = {
         id: 3,
-        type: 'video',
+        type: "video",
         source: JournalTexterDemo,
-        xOffset: -30,
-        yOffset: -10,
-        scale: 1,
-        caption: 'journaltexter',
-        captionSpot: 'topleft',
-    }
+        caption: "journaltexter",
+    };
 
-    const vtItem: PlacedGalleryItem = {
+    const vtItem: GalleryItemDetails = {
         id: 4,
-        type: 'img',
+        type: "img",
         source: VisualTransformersDemo,
-        xOffset: -10,
-        yOffset: 5,
-        scale: 1,
-        caption: 'visual transformers',
-        captionSpot: 'topleft',
-    }
+        caption: "visual transformers",
+    };
 
-    return <div className="page">
+    return (
         <div className="video-gallery">
-            <GalleryRow items={[sockyItem, tronItem]} />
-            <div className="row-spacer-big"/>
-            {/* <div className="row-spacer"/> */}
-            <GalleryRow items={[jtItem, vtItem]} />
-            {/* <div className="row-spacer"/> */}
-            {/* <GalleryRow items={[vtItem]} /> */}
+            <GalleryRow item1={sockyItem} item2={tronItem} />
+            <GalleryRow item1={jtItem} item2={vtItem} />
         </div>
-    </div >
-}
+    );
+};
 
 export default ProjectGallery;

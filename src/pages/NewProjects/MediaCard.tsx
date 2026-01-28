@@ -5,10 +5,9 @@ type Props = {
     id: number;
     source: string;
     type: "img" | "video";
-    scale: number;
 };
 
-const MediaCard = ({ id, type, source, scale }: Props) => {
+const MediaCard = ({ id, type, source }: Props) => {
     const vidRef = useRef<HTMLVideoElement>(null);
 
     const handleMouseEnter = () => {
@@ -22,10 +21,6 @@ const MediaCard = ({ id, type, source, scale }: Props) => {
         <div
             className="media-card"
             id={`media-${id}`}
-            style={{
-                transform: `scale(${scale})`,
-                transformOrigin: "top left",
-            }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

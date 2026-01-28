@@ -1,15 +1,15 @@
 import './App.scss';
 import Experience from './pages/Experience/Experience';
 import Landing from './pages/Landing/Landing';
-import ProjectGallery from './pages/NewProjects/ProjectGallery';
+import Projects from './pages/Projects/Projects';
 
 function App() {
   return (
     <body>
       <Landing />
       <Experience />
-      {/* <Projects /> */}
-      <ProjectGallery />
+      <Projects />
+      {/* <ProjectGallery /> */}
     </body>
   )
 }
