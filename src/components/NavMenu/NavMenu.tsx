@@ -1,13 +1,18 @@
-import './NavMenu.scss';
-import '../../App.scss'
+import "./NavMenu.scss";
+import "../../App.scss";
+import type { NavItemType } from "./Nav";
+import NavItem from "./NavItem";
 
-const NavMenu = () => {
-    return <div className="nav-menu nav-font">
-        <div><a href="">top</a></div>
-        <div><a href="">about me</a></div>
-        <div><a href="">experience</a></div>
-        <div><a href="">projects</a></div>
-    </div>
-}
+type Props = {
+    navItems: NavItemType[];
+};
+
+const NavMenu = ({ navItems }: Props) => {
+    return (
+        <div className="nav-menu nav-font">
+            {navItems.map((navItem) => (<NavItem navItem={navItem}/>))}
+        </div>
+    );
+};
 
 export default NavMenu;

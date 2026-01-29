@@ -1,7 +1,13 @@
+import type { RefObject } from "react";
 
-const About = () => {
+type Props = {
+    sentinelRef: RefObject<HTMLDivElement | null>
+}
 
-    return <div className="page">
+
+const About = ({sentinelRef}: Props) => {
+
+    return <div className="page" ref={sentinelRef}>
         <h1 className="text-center page-title">about me</h1>
     </div>
 
