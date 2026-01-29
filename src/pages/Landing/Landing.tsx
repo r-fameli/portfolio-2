@@ -8,7 +8,7 @@ const Landing = () => {
         <div className="intro">
             <div className="text-center title">Riki Fameli</div>
             <div className="text-center subtitle">full stack software engineer</div>
-            <div className="landing-list">
+            <div className="landing-list nav-font">
                 <div><a href={Resume} target="_blank">resume</a></div>
                 <div><a href="mailto:rikifameli@gmail.com" target="_blank">mail</a></div>
                 <div><a href="https://github.com/r-fameli" target="_blank">github</a></div>
