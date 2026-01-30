@@ -31,7 +31,7 @@ const Experience = ({ sentinelRef }: Props) => {
     );
 
     return (
-        <div className="page" ref={sentinelRef}>
+        <div className="page" id="experience" ref={sentinelRef}>
             <h1 className="text-center page-title">my experience</h1>
             <div className="floating-box-container">
                 <FloatingBox

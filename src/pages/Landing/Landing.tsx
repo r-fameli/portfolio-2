@@ -9,7 +9,7 @@ type Props = {
 
 const Landing = ({ sentinelRef }: Props) => {
     return (
-        <div className="page" id="landing-page" ref={sentinelRef}>
+        <div className="landing page" id="top" ref={sentinelRef}>
             <CirclingIcons numCircles={8} />
             <div className="intro">
                 <div className="text-center title">Riki Fameli</div>

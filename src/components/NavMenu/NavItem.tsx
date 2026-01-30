@@ -10,7 +10,7 @@ const NavItem = ({ navItem }: Props) => {
     const isIntersecting = useIntersection(sentinel, {threshold: 0.4});
     const intersectClass = isIntersecting ? 'not-vis-item' : 'vis-item'
     return <div key={key}>
-        <a href="" className={'nav-item ' + intersectClass}>{label}</a>
+        <a href={`#${key}`} className={'nav-item ' + intersectClass}>{label}</a>
     </div>
 }
 

@@ -6,8 +6,7 @@ type Props = {
 
 
 const About = ({sentinelRef}: Props) => {
-
-    return <div className="page" ref={sentinelRef}>
+    return <div className="page" id="about" ref={sentinelRef}>
         <h1 className="text-center page-title">about me</h1>
     </div>
 
