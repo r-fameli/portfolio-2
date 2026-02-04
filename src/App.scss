@@ -1,7 +1,7 @@
 @use 'variables';
 
 body {
-    background-color: variables.$color-back;
+    background-color: variables.$color-main;
     color: variables.$color-text;
     font-family: variables.$font;
 }
