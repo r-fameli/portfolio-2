@@ -1,0 +1,25 @@
+@use '../../variables';
+
+.about-container {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10vw;
+    gap: 10%;
+}
+
+.about-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.about-image {
+    max-height: 37vh;
+    border-radius: 100%;
+    border: 5px solid variables.$color-accent2;
+}
+
+.about-text {
+}
